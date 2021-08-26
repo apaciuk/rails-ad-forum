@@ -1,2 +1,15 @@
-<h1>Welcome to Jumpstart!</h1>
-<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+<div class="row">
+<div class="col-3">
+Side Panel
+</div>
+<div class="col-9">
+<div class="row">
+<% @categories.each do |category| %>
+<p class="lead"><strong><%= category.name %></strong></p>
+<% category.subcategories.each do |subcategory| %>
+  <li><%= subcategory.name %></li>
+<% end %>
+<% end %>
+</div>
+</div>
+</div>
